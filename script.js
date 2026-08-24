@@ -1,29 +1,20 @@
 // ===============================
-// START BUTTON
+// START SCREEN
 // ===============================
 
-const startBtn = document.getElementById("startBtn");
 const startScreen = document.getElementById("startScreen");
 const mainSite = document.getElementById("mainSite");
+const startBtn = document.getElementById("startBtn");
 
-
-startBtn.addEventListener("click", function () {
+startBtn.addEventListener("click", () => {
 
     startScreen.classList.add("hide");
 
     setTimeout(() => {
-
         mainSite.classList.add("show");
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
-    }, 500);
+    }, 400);
 
 });
-
 
 
 // ===============================
@@ -33,8 +24,7 @@ startBtn.addEventListener("click", function () {
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
 
-
-menuBtn.addEventListener("click", function () {
+menuBtn.addEventListener("click", () => {
 
     nav.classList.toggle("open");
 
@@ -43,7 +33,9 @@ menuBtn.addEventListener("click", function () {
 
 // Close menu after clicking a link
 
-document.querySelectorAll("#nav a").forEach(link => {
+const navLinks = document.querySelectorAll("#nav a");
+
+navLinks.forEach(link => {
 
     link.addEventListener("click", () => {
 
@@ -54,9 +46,71 @@ document.querySelectorAll("#nav a").forEach(link => {
 });
 
 
+// ===============================
+// LANGUAGE
+// ===============================
+
+const languageBtn = document.getElementById("languageBtn");
+const languageText = document.getElementById("languageText");
+
+let currentLanguage = "en";
+
+function changeLanguage(language) {
+
+    currentLanguage = language;
+
+    document.documentElement.lang = language;
+
+    if (language === "ar") {
+
+        document.body.classList.add("rtl");
+
+        document.documentElement.dir = "rtl";
+
+        languageText.textContent = "EN";
+
+    } else {
+
+        document.body.classList.remove("rtl");
+
+        document.documentElement.dir = "ltr";
+
+        languageText.textContent = "AR";
+
+    }
+
+
+    const translatedElements =
+        document.querySelectorAll("[data-en][data-ar]");
+
+
+    translatedElements.forEach(element => {
+
+        element.textContent =
+            element.getAttribute(`data-${language}`);
+
+    });
+
+}
+
+
+languageBtn.addEventListener("click", () => {
+
+    if (currentLanguage === "en") {
+
+        changeLanguage("ar");
+
+    } else {
+
+        changeLanguage("en");
+
+    }
+
+});
+
 
 // ===============================
-// SCROLL ANIMATION
+// SCROLL REVEAL
 // ===============================
 
 const revealElements =
@@ -65,7 +119,7 @@ const revealElements =
 
 const observer = new IntersectionObserver(
 
-    (entries) => {
+    entries => {
 
         entries.forEach(entry => {
 
@@ -80,7 +134,7 @@ const observer = new IntersectionObserver(
     },
 
     {
-        threshold: 0.15
+        threshold: 0.12
     }
 
 );
@@ -91,7 +145,6 @@ revealElements.forEach(element => {
     observer.observe(element);
 
 });
-
 
 
 // ===============================
