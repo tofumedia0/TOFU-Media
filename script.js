@@ -1,240 +1,102 @@
-document.addEventListener("DOMContentLoaded", function () {
+// ===============================
+// START BUTTON
+// ===============================
 
-    /* =========================
-       ELEMENTS
-    ========================= */
-
-    const menuBtn = document.getElementById("menuBtn");
-    const nav = document.getElementById("nav");
-    const progressBar = document.getElementById("progressBar");
-    const logoCard = document.getElementById("logoCard");
-    const languageBtn = document.getElementById("languageBtn");
+const startBtn = document.getElementById("startBtn");
+const startScreen = document.getElementById("startScreen");
+const mainSite = document.getElementById("mainSite");
 
 
+startBtn.addEventListener("click", function () {
 
-    /* =========================
-       MOBILE MENU
-    ========================= */
+    startScreen.classList.add("hide");
 
-    if (menuBtn && nav) {
+    setTimeout(() => {
 
-        menuBtn.addEventListener("click", function () {
+        mainSite.classList.add("show");
 
-            nav.classList.toggle("open");
-
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
         });
 
+    }, 500);
 
-        document.querySelectorAll("nav a").forEach(function (link) {
-
-            link.addEventListener("click", function () {
-
-                nav.classList.remove("open");
-
-            });
-
-        });
-
-    }
+});
 
 
 
-    /* =========================
-       SCROLL PROGRESS
-    ========================= */
+// ===============================
+// MOBILE MENU
+// ===============================
 
-    window.addEventListener("scroll", function () {
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("nav");
 
-        if (!progressBar) return;
 
-        const scrollTop = window.scrollY;
+menuBtn.addEventListener("click", function () {
 
-        const height =
-            document.documentElement.scrollHeight -
-            window.innerHeight;
+    nav.classList.toggle("open");
 
-        const progress =
-            height > 0
-                ? (scrollTop / height) * 100
-                : 0;
+});
 
-        progressBar.style.width =
-            progress + "%";
+
+// Close menu after clicking a link
+
+document.querySelectorAll("#nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        nav.classList.remove("open");
 
     });
 
-
-
-    /* =========================
-       3D LOGO
-    ========================= */
-
-    if (
-        logoCard &&
-        window.matchMedia("(pointer: fine)").matches
-    ) {
-
-        logoCard.addEventListener("mousemove", function (event) {
-
-            const rect =
-                logoCard.getBoundingClientRect();
-
-            const x =
-                event.clientX - rect.left;
-
-            const y =
-                event.clientY - rect.top;
-
-            const rotateY =
-                ((x / rect.width) - 0.5) * 10;
-
-            const rotateX =
-                ((y / rect.height) - 0.5) * -10;
-
-            logoCard.style.transform =
-                `
-                perspective(900px)
-                rotateX(${rotateX}deg)
-                rotateY(${rotateY}deg)
-                scale(1.015)
-                `;
-
-        });
-
-
-        logoCard.addEventListener("mouseleave", function () {
-
-            logoCard.style.transform =
-                `
-                perspective(900px)
-                rotateX(0deg)
-                rotateY(0deg)
-                scale(1)
-                `;
-
-        });
-
-    }
+});
 
 
 
-    /* =========================
-       SCROLL REVEAL
-    ========================= */
+// ===============================
+// SCROLL ANIMATION
+// ===============================
 
-    const revealElements =
-        document.querySelectorAll(".reveal");
-
-
-    if ("IntersectionObserver" in window) {
-
-        const observer =
-            new IntersectionObserver(
-                function (entries) {
-
-                    entries.forEach(function (entry) {
-
-                        if (entry.isIntersecting) {
-
-                            entry.target.classList.add("show");
-
-                            observer.unobserve(
-                                entry.target
-                            );
-
-                        }
-
-                    });
-
-                },
-                {
-                    threshold: 0.12
-                }
-            );
+const revealElements =
+    document.querySelectorAll(".reveal");
 
 
-        revealElements.forEach(function (element) {
+const observer = new IntersectionObserver(
 
-            observer.observe(element);
+    (entries) => {
 
-        });
+        entries.forEach(entry => {
 
-    } else {
+            if (entry.isIntersecting) {
 
-        revealElements.forEach(function (element) {
-
-            element.classList.add("show");
-
-        });
-
-    }
-
-
-
-    /* =========================
-       LANGUAGE
-    ========================= */
-
-    let currentLanguage = "en";
-
-
-    if (languageBtn) {
-
-        languageBtn.addEventListener("click", function () {
-
-            if (currentLanguage === "en") {
-
-                currentLanguage = "ar";
-
-                document.documentElement.lang = "ar";
-
-                document.body.classList.add("arabic");
-
-                languageBtn.textContent = "English";
-
-            } else {
-
-                currentLanguage = "en";
-
-                document.documentElement.lang = "en";
-
-                document.body.classList.remove("arabic");
-
-                languageBtn.textContent = "عربي";
+                entry.target.classList.add("active");
 
             }
 
-
-            document
-                .querySelectorAll("[data-en][data-ar]")
-                .forEach(function (element) {
-
-                    element.textContent =
-                        element.getAttribute(
-                            "data-" + currentLanguage
-                        );
-
-                });
-
         });
 
+    },
+
+    {
+        threshold: 0.15
     }
 
+);
 
 
-    /* =========================
-       FOOTER YEAR
-    ========================= */
+revealElements.forEach(element => {
 
-    const year =
-        document.getElementById("year");
-
-
-    if (year) {
-
-        year.textContent =
-            new Date().getFullYear();
-
-    }
+    observer.observe(element);
 
 });
+
+
+
+// ===============================
+// YEAR
+// ===============================
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
