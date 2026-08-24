@@ -6,11 +6,11 @@ const startScreen = document.getElementById("startScreen");
 const mainSite = document.getElementById("mainSite");
 const startBtn = document.getElementById("startBtn");
 
-startBtn.addEventListener("click", () => {
+startBtn.addEventListener("click", function () {
 
     startScreen.classList.add("hide");
 
-    setTimeout(() => {
+    setTimeout(function () {
         mainSite.classList.add("show");
     }, 400);
 
@@ -24,23 +24,16 @@ startBtn.addEventListener("click", () => {
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
 
-menuBtn.addEventListener("click", () => {
-
+menuBtn.addEventListener("click", function () {
     nav.classList.toggle("open");
-
 });
-
-
-// Close menu after clicking a link
 
 const navLinks = document.querySelectorAll("#nav a");
 
-navLinks.forEach(link => {
+navLinks.forEach(function (link) {
 
-    link.addEventListener("click", () => {
-
+    link.addEventListener("click", function () {
         nav.classList.remove("open");
-
     });
 
 });
@@ -59,42 +52,47 @@ function changeLanguage(language) {
 
     currentLanguage = language;
 
-    document.documentElement.lang = language;
-
+    // تغيير اتجاه الصفحة
     if (language === "ar") {
 
-        document.body.classList.add("rtl");
-
+        document.documentElement.lang = "ar";
         document.documentElement.dir = "rtl";
+
+        document.body.classList.add("rtl");
 
         languageText.textContent = "EN";
 
     } else {
 
-        document.body.classList.remove("rtl");
-
+        document.documentElement.lang = "en";
         document.documentElement.dir = "ltr";
 
-        languageText.textContent = "AR";
+        document.body.classList.remove("rtl");
 
+        languageText.textContent = "AR";
     }
 
 
-    const translatedElements =
+    // ترجمة كل العناصر
+    const elements =
         document.querySelectorAll("[data-en][data-ar]");
 
+    elements.forEach(function (element) {
 
-    translatedElements.forEach(element => {
+        const translation =
+            element.getAttribute("data-" + language);
 
-        element.textContent =
-            element.getAttribute(`data-${language}`);
+        if (translation) {
+            element.textContent = translation;
+        }
 
     });
 
 }
 
 
-languageBtn.addEventListener("click", () => {
+// الضغط على زر اللغة
+languageBtn.addEventListener("click", function () {
 
     if (currentLanguage === "en") {
 
@@ -110,18 +108,16 @@ languageBtn.addEventListener("click", () => {
 
 
 // ===============================
-// SCROLL REVEAL
+// SCROLL ANIMATION
 // ===============================
 
 const revealElements =
     document.querySelectorAll(".reveal");
 
+const observer =
+    new IntersectionObserver(function (entries) {
 
-const observer = new IntersectionObserver(
-
-    entries => {
-
-        entries.forEach(entry => {
+        entries.forEach(function (entry) {
 
             if (entry.isIntersecting) {
 
@@ -131,19 +127,13 @@ const observer = new IntersectionObserver(
 
         });
 
-    },
-
-    {
-        threshold: 0.12
-    }
-
-);
+    }, {
+        threshold: 0.1
+    });
 
 
-revealElements.forEach(element => {
-
+revealElements.forEach(function (element) {
     observer.observe(element);
-
 });
 
 
