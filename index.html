@@ -5,7 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TOFU | Teens Opportunities For Upgrowth</title>
+    <!-- Title & SEO Meta Tags -->
+    <title>TOFU Media — Teens Opportunities For Upgrowth</title>
+    <meta name="description" content="TOFU Media is a youth initiative helping young people discover opportunities, learn skills, gain experience, and grow.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="TOFU Media — Teens Opportunities For Upgrowth">
+    <meta property="og:description" content="A youth initiative helping young people discover opportunities, learn skills, gain experience, and grow.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="tofu-logo.png">
+
+    <!-- Structured Data for Google (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TOFU Media",
+      "alternateName": "Teens Opportunities For Upgrowth",
+      "url": "https://tofumedia0.github.io/",
+      "logo": "https://tofumedia0.github.io/tofu-logo.png",
+      "description": "TOFU Media is a youth initiative helping young people discover opportunities, learn skills, gain experience, and grow.",
+      "sameAs": [
+        "https://www.facebook.com/share/1ctJQ6fC7n/",
+        "https://www.instagram.com/tofumedia0?igsh=MWFidWJneDhkZ3d0",
+        "https://whatsapp.com/channel/0029Vb8LeVt8Pgs7tu6oem2l"
+      ]
+    }
+    </script>
 
     <link rel="stylesheet" href="style.css">
 
@@ -19,697 +45,276 @@
 
 <body>
 
-    <!-- =========================
-         START SCREEN
-    ========================== -->
-
+    <!-- START SCREEN -->
     <section class="start-screen" id="startScreen">
-
         <div class="start-bg"></div>
-
         <div class="start-content">
-
-            <img
-                src="tofu-logo.png"
-                alt="TOFU Logo"
-                class="start-logo"
-            >
-
+            <img src="tofu-logo.png" alt="TOFU Logo" class="start-logo">
             <button class="start-btn" id="startBtn">
                 <span data-en="START" data-ar="ابدأ">START</span>
                 <span class="arrow">→</span>
             </button>
-
         </div>
-
     </section>
 
-
-    <!-- =========================
-         MAIN WEBSITE
-    ========================== -->
-
+    <!-- MAIN WEBSITE -->
     <div class="main-site" id="mainSite">
 
         <!-- NAVBAR -->
-
         <header class="navbar">
-
             <a href="#home" class="brand">
                 <span class="brand-logo">T</span>
-                <span>TOFU</span>
+                <span>TOFU Media</span>
             </a>
 
             <nav id="nav">
-
-                <a href="#home" data-en="Home" data-ar="الرئيسية">
-                    Home
-                </a>
-
-                <a href="#about" data-en="About" data-ar="عن TOFU">
-                    About
-                </a>
-
-                <a href="#opportunities" data-en="Opportunities" data-ar="الفرص">
-                    Opportunities
-                </a>
-
-                <a href="#links" data-en="Links" data-ar="اللينكات">
-                    Links
-                </a>
-
-                <a href="#join" data-en="Join Us" data-ar="انضم لينا">
-                    Join Us
-                </a>
-
+                <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+                <a href="#about" data-en="About" data-ar="عن TOFU">About</a>
+                <a href="#opportunities" data-en="Opportunities" data-ar="الفرص">Opportunities</a>
+                <a href="#collaborations" data-en="Collaborations" data-ar="التعاونات">Collaborations</a>
+                <a href="#links" data-en="Links" data-ar="اللينكات">Links</a>
+                <a href="#join" data-en="Join Us" data-ar="انضم لينا">Join Us</a>
             </nav>
 
-
             <div class="nav-actions">
-
-                <!-- LANGUAGE -->
-
                 <button class="language-btn" id="languageBtn" type="button">
                     🌐 <span id="languageText">AR</span>
                 </button>
-
-                <!-- MOBILE MENU -->
-
-                <button class="menu-btn" id="menuBtn">
-                    ☰
-                </button>
-
+                <button class="menu-btn" id="menuBtn">☰</button>
             </div>
-
         </header>
 
-
-        <!-- =========================
-             HERO
-        ========================== -->
-
         <main>
-
+            <!-- HERO -->
             <section class="hero" id="home">
-
                 <div class="hero-text reveal">
-
                     <div class="badge"
                          data-en="💜 Built for teens, powered by opportunities"
                          data-ar="💜 مبادرة للشباب، مليانة فرص">
-
                         💜 Built for teens, powered by opportunities
-
                     </div>
 
-
-                    <h1>TOFU</h1>
-
+                    <h1>TOFU Media</h1>
 
                     <h2>
-                        <span
-                            data-en="Teens Opportunities"
-                            data-ar="Teens Opportunities">
-                            Teens Opportunities
-                        </span>
-
+                        <span data-en="Teens Opportunities" data-ar="Teens Opportunities">Teens Opportunities</span>
                         <br>
-
-                        <span class="purple"
-                            data-en="For Upgrowth"
-                            data-ar="For Upgrowth">
-                            For Upgrowth
-                        </span>
+                        <span class="purple" data-en="For Upgrowth" data-ar="For Upgrowth">For Upgrowth</span>
                     </h2>
 
-
-                    <p
-                        data-en="TOFU is a youth initiative helping teens discover opportunities, learn new skills and grow."
-                        data-ar="TOFU مبادرة شبابية بتساعد الشباب يكتشفوا الفرص، يتعلموا مهارات جديدة ويتطوروا.">
-
-                        TOFU is a youth initiative helping teens discover opportunities,
-                        learn new skills and grow.
-
+                    <p data-en="TOFU Media is a youth initiative helping young people discover opportunities, learn skills, gain experience, and grow."
+                       data-ar="TOFU Media مبادرة شبابية بتساعد الشباب يكتشفوا الفرص، يتعلموا مهارات جديدة، يكتسبوا خبرة ويتطوروا.">
+                        TOFU Media is a youth initiative helping young people discover opportunities, learn skills, gain experience, and grow.
                     </p>
 
-
                     <div class="hero-buttons">
-
-                        <a
-                            href="https://tofumedia0.github.io/tofu-media-form/"
-                            target="_blank"
-                            class="btn primary">
-
-                            <span
-                                data-en="Become a Volunteer"
-                                data-ar="قدّم كمتطوع">
-                                Become a Volunteer
-                            </span>
-
-                            ↗
-
+                        <a href="https://tofumedia0.github.io/tofu-media-form/" target="_blank" class="btn primary">
+                            <span data-en="Become a Volunteer" data-ar="قدّم كمتطوع">Become a Volunteer</span> ↗
                         </a>
-
-
-                        <a
-                            href="#opportunities"
-                            class="btn secondary">
-
-                            <span
-                                data-en="Explore Opportunities"
-                                data-ar="اكتشف الفرص">
-                                Explore Opportunities
-                            </span>
-
+                        <a href="#opportunities" class="btn secondary">
+                            <span data-en="Explore Opportunities" data-ar="اكتشف الفرص">Explore Opportunities</span>
                         </a>
-
                     </div>
-
 
                     <div class="stats">
-
                         <div>
                             <strong>01</strong>
-                            <span
-                                data-en="Discover"
-                                data-ar="اكتشف">
-                                Discover
-                            </span>
+                            <span data-en="Discover" data-ar="اكتشف">Discover</span>
                         </div>
-
                         <div>
                             <strong>02</strong>
-                            <span
-                                data-en="Learn"
-                                data-ar="اتعلم">
-                                Learn
-                            </span>
+                            <span data-en="Learn" data-ar="اتعلم">Learn</span>
                         </div>
-
                         <div>
                             <strong>03</strong>
-                            <span
-                                data-en="Grow"
-                                data-ar="اتطور">
-                                Grow
-                            </span>
+                            <span data-en="Grow" data-ar="اتطور">Grow</span>
                         </div>
-
                     </div>
-
                 </div>
-
 
                 <div class="hero-logo reveal">
-
                     <div class="glow"></div>
-
                     <div class="logo-box">
-
-                        <img
-                            src="tofu-logo.png"
-                            alt="TOFU">
-
+                        <img src="tofu-logo.png" alt="TOFU Media Logo">
                     </div>
-
                 </div>
-
             </section>
 
-
-            <!-- =========================
-                 ABOUT
-            ========================== -->
-
+            <!-- ABOUT -->
             <section class="section about" id="about">
-
                 <div class="section-title reveal">
-
-                    <small
-                        data-en="OUR STORY"
-                        data-ar="حكايتنا">
-                        OUR STORY
-                    </small>
-
-                    <h2
-                        data-en="From Marketing to Opportunities."
-                        data-ar="من الماركتنج لصناعة الفرص.">
-
-                        From Marketing to Opportunities.
-
-                    </h2>
-
+                    <small data-en="OUR STORY" data-ar="حكايتنا">OUR STORY</small>
+                    <h2 data-en="From Marketing to Opportunities." data-ar="من الماركتنج لصناعة الفرص.">From Marketing to Opportunities.</h2>
                 </div>
-
 
                 <div class="about-grid">
-
                     <div class="about-big reveal">
-
                         <span>01</span>
-
-                        <h3
-                            data-en="Where we started"
-                            data-ar="إحنا بدأنا إزاي؟">
-
-                            Where we started
-
-                        </h3>
-
-                        <p
-                            data-en="TOFU started as a Marketing Team helping people, initiatives, events and businesses through content, social media and branding."
-                            data-ar="TOFU بدأت كتيم ماركتنج بنساعد الأشخاص والمبادرات والإيفنتات والبزنس من خلال المحتوى والسوشيال ميديا والبراندنج.">
-
-                            TOFU started as a Marketing Team helping people,
-                            initiatives, events and businesses through content,
-                            social media and branding.
-
+                        <h3 data-en="Where we started" data-ar="إحنا بدأنا إزاي؟">Where we started</h3>
+                        <p data-en="TOFU started as a Marketing Team helping people, initiatives, events and businesses through content, social media and branding."
+                           data-ar="TOFU بدأت كتيم ماركتنج بنساعد الأشخاص والمبادرات والإيفنتات والبزنس من خلال المحتوى والسوشيال ميديا والبراندنج.">
+                            TOFU started as a Marketing Team helping people, initiatives, events and businesses through content, social media and branding.
                         </p>
-
                     </div>
-
 
                     <div class="about-big active-card reveal">
-
                         <span>02</span>
-
-                        <h3
-                            data-en="Where we are now"
-                            data-ar="إحنا بقينا إيه؟">
-
-                            Where we are now
-
-                        </h3>
-
-                        <p
-                            data-en="Today, TOFU is a youth initiative helping teens find scholarships, courses, competitions, events, volunteering opportunities and more."
-                            data-ar="دلوقتي TOFU مبادرة شبابية بتساعد الشباب يلاقوا منح، كورسات، مسابقات، إيفنتات، فرص تطوع وغيره.">
-
-                            Today, TOFU is a youth initiative helping teens
-                            find scholarships, courses, competitions, events,
-                            volunteering opportunities and more.
-
+                        <h3 data-en="Where we are now" data-ar="إحنا بقينا إيه؟">Where we are now</h3>
+                        <p data-en="Today, TOFU Media is a youth initiative helping teens find scholarships, courses, competitions, events, volunteering opportunities and more."
+                           data-ar="دلوقتي TOFU Media مبادرة شبابية بتساعد الشباب يلاقوا منح، كورسات، مسابقات، إيفنتات، فرص تطوع وغيره.">
+                            Today, TOFU Media is a youth initiative helping teens find scholarships, courses, competitions, events, volunteering opportunities and more.
                         </p>
-
                     </div>
-
                 </div>
-
             </section>
 
-
-            <!-- =========================
-                 OPPORTUNITIES
-            ========================== -->
-
+            <!-- OPPORTUNITIES -->
             <section class="section" id="opportunities">
-
                 <div class="section-title reveal">
-
-                    <small
-                        data-en="OPPORTUNITIES"
-                        data-ar="الفرص">
-                        OPPORTUNITIES
-                    </small>
-
-                    <h2
-                        data-en="Something for every dream."
-                        data-ar="فرصة لكل حلم.">
-
-                        Something for every dream.
-
-                    </h2>
-
+                    <small data-en="OPPORTUNITIES" data-ar="الفرص">OPPORTUNITIES</small>
+                    <h2 data-en="Something for every dream." data-ar="فرصة لكل حلم.">Something for every dream.</h2>
                 </div>
-
 
                 <div class="cards">
-
                     <div class="card reveal">
-
                         <div class="card-icon">🎓</div>
-
-                        <h3
-                            data-en="Scholarships"
-                            data-ar="منح دراسية">
-                            Scholarships
-                        </h3>
-
-                        <p
-                            data-en="Discover scholarships and educational opportunities."
-                            data-ar="اكتشف المنح والفرص التعليمية.">
-                            Discover scholarships and educational opportunities.
-                        </p>
-
+                        <h3 data-en="Scholarships" data-ar="منح دراسية">Scholarships</h3>
+                        <p data-en="Discover scholarships and educational opportunities." data-ar="اكتشف المنح والفرص التعليمية.">Discover scholarships and educational opportunities.</p>
                     </div>
 
-
                     <div class="card reveal">
-
                         <div class="card-icon">💻</div>
-
-                        <h3
-                            data-en="Courses"
-                            data-ar="كورسات">
-                            Courses
-                        </h3>
-
-                        <p
-                            data-en="Learn useful skills through courses and programs."
-                            data-ar="اتعلم مهارات مفيدة من خلال الكورسات والبرامج.">
-                            Learn useful skills through courses and programs.
-                        </p>
-
+                        <h3 data-en="Courses" data-ar="كورسات">Courses</h3>
+                        <p data-en="Learn useful skills through courses and programs." data-ar="اتعلم مهارات مفيدة من خلال الكورسات والبرامج.">Learn useful skills through courses and programs.</p>
                     </div>
 
-
                     <div class="card reveal">
-
                         <div class="card-icon">🏆</div>
-
-                        <h3
-                            data-en="Competitions"
-                            data-ar="مسابقات">
-                            Competitions
-                        </h3>
-
-                        <p
-                            data-en="Take part in competitions and gain experience."
-                            data-ar="شارك في مسابقات واكسب خبرة جديدة.">
-                            Take part in competitions and gain experience.
-                        </p>
-
+                        <h3 data-en="Competitions" data-ar="مسابقات">Competitions</h3>
+                        <p data-en="Take part in competitions and gain experience." data-ar="شارك في مسابقات واكسب خبرة جديدة.">Take part in competitions and gain experience.</p>
                     </div>
 
-
                     <div class="card reveal">
-
                         <div class="card-icon">🎤</div>
-
-                        <h3
-                            data-en="Events"
-                            data-ar="إيفنتات">
-                            Events
-                        </h3>
-
-                        <p
-                            data-en="Find events that help you learn and connect."
-                            data-ar="اعرف الإيفنتات اللي هتساعدك تتعلم وتتواصل."
-                            >
-                            Find events that help you learn and connect.
-                        </p>
-
+                        <h3 data-en="Events" data-ar="إيفنتات">Events</h3>
+                        <p data-en="Find events that help you learn and connect." data-ar="اعرف الإيفنتات اللي هتساعدك تتعلم وتتواصل.">Find events that help you learn and connect.</p>
                     </div>
-
 
                     <div class="card reveal">
-
                         <div class="card-icon">🤝</div>
-
-                        <h3
-                            data-en="Volunteering"
-                            data-ar="تطوع">
-                            Volunteering
-                        </h3>
-
-                        <p
-                            data-en="Build experience and meet people through volunteering."
-                            data-ar="اكتسب خبرة واتعرف على ناس جديدة من خلال التطوع.">
-                            Build experience and meet people through volunteering.
-                        </p>
-
+                        <h3 data-en="Volunteering" data-ar="تطوع">Volunteering</h3>
+                        <p data-en="Build experience and meet people through volunteering." data-ar="اكتسب خبرة واتعرف على ناس جديدة من خلال التطوع.">Build experience and meet people through volunteering.</p>
                     </div>
-
 
                     <div class="card special reveal">
-
                         <div class="card-icon">🚀</div>
-
-                        <h3
-                            data-en="And More"
-                            data-ar="وغيره كتير">
-                            And More
-                        </h3>
-
-                        <p
-                            data-en="More opportunities are waiting for you."
-                            data-ar="لسه في فرص أكتر مستنياك.">
-                            More opportunities are waiting for you.
-                        </p>
-
+                        <h3 data-en="And More" data-ar="وغيره كتير">And More</h3>
+                        <p data-en="More opportunities are waiting for you." data-ar="لسه في فرص أكتر مستنياك.">More opportunities are waiting for you.</p>
                     </div>
-
                 </div>
-
             </section>
 
-
-            <!-- =========================
-                 LINKS
-            ========================== -->
-
-            <section class="section links-section" id="links">
-
+            <!-- OUR COLLABORATIONS SECTION -->
+            <section class="section" id="collaborations">
                 <div class="section-title reveal">
-
-                    <small
-                        data-en="CONNECT WITH US"
-                        data-ar="تواصل معانا">
-                        CONNECT WITH US
-                    </small>
-
-                    <h2
-                        data-en="TOFU is one click away."
-                        data-ar="TOFU على بُعد ضغطة واحدة.">
-
-                        TOFU is one click away.
-
-                    </h2>
-
+                    <small data-en="PARTNERSHIPS" data-ar="شراكاتنا">PARTNERSHIPS</small>
+                    <h2 data-en="Our Collaborations." data-ar="تعاوناتنا.">Our Collaborations.</h2>
                 </div>
 
+                <div class="cards">
+                    <a href="https://whatsapp.com/channel/0029VbBfUhz9WtC3Xbivym30" target="_blank" class="card reveal special" style="display: block; text-decoration: none;">
+                        <div style="width: 70px; height: 70px; margin-bottom: 20px; border-radius: 50%; overflow: hidden; border: 2px solid #a36bff;">
+                            <img src="noqtetpdaya.jpeg" alt="نقطة بداية" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <h3 data-en="TOFU Media × نقطة بداية" data-ar="TOFU Media × نقطة بداية">TOFU Media × نقطة بداية</h3>
+                        <p data-en="A collaboration focused on connecting young people with valuable opportunities and resources."
+                           data-ar="تعاون يهدف لربط الشباب بأحدث الفرص والمصادر التعليمية والتطويرية.">
+                            A collaboration focused on connecting young people with valuable opportunities and resources.
+                        </p>
+                        <div style="margin-top: 20px; color: #a36bff; font-weight: 700; font-size: 14px;">
+                            <span data-en="Visit WhatsApp Channel ↗" data-ar="زيارة قناة الواتساب ↗">Visit WhatsApp Channel ↗</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- LINKS -->
+            <section class="section links-section" id="links">
+                <div class="section-title reveal">
+                    <small data-en="CONNECT WITH US" data-ar="تواصل معانا">CONNECT WITH US</small>
+                    <h2 data-en="TOFU is one click away." data-ar="TOFU على بُعد ضغطة واحدة.">TOFU is one click away.</h2>
+                </div>
 
                 <div class="links-grid">
-
-
-                    <!-- Volunteer -->
-
-                    <a
-                        href="https://tofumedia0.github.io/tofu-media-form/"
-                        target="_blank"
-                        class="link-card reveal">
-
+                    <a href="https://tofumedia0.github.io/tofu-media-form/" target="_blank" class="link-card reveal">
                         <div class="link-icon">📝</div>
-
                         <div>
-                            <h3
-                                data-en="Volunteer"
-                                data-ar="التطوع">
-                                Volunteer
-                            </h3>
-
-                            <p
-                                data-en="Join the TOFU team"
-                                data-ar="انضم لفريق TOFU">
-                                Join the TOFU team
-                            </p>
+                            <h3 data-en="Volunteer" data-ar="التطوع">Volunteer</h3>
+                            <p data-en="Join the TOFU team" data-ar="انضم لفريق TOFU">Join the TOFU team</p>
                         </div>
-
                         <span>↗</span>
-
                     </a>
 
-
-                    <!-- Community -->
-
-                    <a
-                        href="https://chat.whatsapp.com/Eo4EkuXMAKHEko3KmvFZZ1"
-                        target="_blank"
-                        class="link-card reveal">
-
+                    <a href="https://chat.whatsapp.com/Eo4EkuXMAKHEko3KmvFZZ1" target="_blank" class="link-card reveal">
                         <div class="link-icon">👥</div>
-
                         <div>
-                            <h3
-                                data-en="Community"
-                                data-ar="الكوميونيتي">
-                                Community
-                            </h3>
-
-                            <p
-                                data-en="Join the TOFU Community"
-                                data-ar="انضم لكوميونيتي TOFU">
-                                Join the TOFU Community
-                            </p>
+                            <h3 data-en="Community" data-ar="الكوميونيتي">Community</h3>
+                            <p data-en="Join the TOFU Community" data-ar="انضم لكوميونيتي TOFU">Join the TOFU Community</p>
                         </div>
-
                         <span>↗</span>
-
                     </a>
 
-
-                    <!-- WhatsApp -->
-
-                    <a
-                        href="https://whatsapp.com/channel/0029Vb8LeVt8Pgs7tu6oem2l"
-                        target="_blank"
-                        class="link-card reveal">
-
+                    <a href="https://whatsapp.com/channel/0029Vb8LeVt8Pgs7tu6oem2l" target="_blank" class="link-card reveal">
                         <div class="link-icon">📢</div>
-
                         <div>
-                            <h3
-                                data-en="WhatsApp Channel"
-                                data-ar="قناة الواتساب">
-                                WhatsApp Channel
-                            </h3>
-
-                            <p
-                                data-en="Latest updates and opportunities"
-                                data-ar="آخر التحديثات والفرص">
-                                Latest updates and opportunities
-                            </p>
+                            <h3 data-en="WhatsApp Channel" data-ar="قناة الواتساب">WhatsApp Channel</h3>
+                            <p data-en="Latest updates and opportunities" data-ar="آخر التحديثات والفرص">Latest updates and opportunities</p>
                         </div>
-
                         <span>↗</span>
-
                     </a>
 
-
-                    <!-- Instagram -->
-
-                    <a
-                        href="https://www.instagram.com/tofumedia0?igsh=MWFidWJneDhkZ3d0"
-                        target="_blank"
-                        class="link-card reveal">
-
+                    <a href="https://www.instagram.com/tofumedia0?igsh=MWFidWJneDhkZ3d0" target="_blank" class="link-card reveal">
                         <div class="link-icon">📸</div>
-
                         <div>
-                            <h3
-                                data-en="Instagram"
-                                data-ar="إنستجرام">
-                                Instagram
-                            </h3>
-
-                            <p
-                                data-en="Follow TOFU Media"
-                                data-ar="تابع TOFU Media">
-                                Follow TOFU Media
-                            </p>
+                            <h3 data-en="Instagram" data-ar="إنستجرام">Instagram</h3>
+                            <p data-en="Follow TOFU Media" data-ar="تابع TOFU Media">Follow TOFU Media</p>
                         </div>
-
                         <span>↗</span>
-
                     </a>
 
-
-                    <!-- Facebook -->
-
-                    <a
-                        href="https://www.facebook.com/share/1ctJQ6fC7n/"
-                        target="_blank"
-                        class="link-card reveal">
-
+                    <a href="https://www.facebook.com/share/1ctJQ6fC7n/" target="_blank" class="link-card reveal">
                         <div class="link-icon">💙</div>
-
                         <div>
-                            <h3
-                                data-en="Facebook"
-                                data-ar="فيسبوك">
-                                Facebook
-                            </h3>
-
-                            <p
-                                data-en="Follow our Facebook page"
-                                data-ar="تابع صفحتنا على فيسبوك">
-                                Follow our Facebook page
-                            </p>
+                            <h3 data-en="Facebook" data-ar="فيسبوك">Facebook</h3>
+                            <p data-en="Follow our Facebook page" data-ar="تابع صفحتنا على فيسبوك">Follow our Facebook page</p>
                         </div>
-
                         <span>↗</span>
-
                     </a>
-
                 </div>
-
             </section>
 
-
-            <!-- =========================
-                 JOIN
-            ========================== -->
-
+            <!-- JOIN -->
             <section class="join reveal" id="join">
-
-                <small
-                    data-en="READY TO START?"
-                    data-ar="جاهز تبدأ؟">
-                    READY TO START?
-                </small>
-
-                <h2
-                    data-en="Your next opportunity might start with TOFU."
-                    data-ar="فرصتك الجاية ممكن تبدأ مع TOFU.">
-
-                    Your next opportunity might start with TOFU.
-
-                </h2>
-
-                <p
-                    data-en="Join us, learn, connect and grow."
-                    data-ar="انضم لينا، اتعلم، اتواصل واتطور.">
-
-                    Join us, learn, connect and grow.
-
-                </p>
-
-
-                <a
-                    href="https://tofumedia0.github.io/tofu-media-form/"
-                    target="_blank"
-                    class="btn white">
-
-                    <span
-                        data-en="Join TOFU"
-                        data-ar="انضم لـ TOFU">
-                        Join TOFU
-                    </span>
-
-                    ↗
-
+                <small data-en="READY TO START?" data-ar="جاهز تبدأ؟">READY TO START?</small>
+                <h2 data-en="Your next opportunity might start with TOFU." data-ar="فرصتك الجاية ممكن تبدأ مع TOFU.">Your next opportunity might start with TOFU.</h2>
+                <p data-en="Join us, learn, connect and grow." data-ar="انضم لينا، اتعلم، اتواصل واتطور.">Join us, learn, connect and grow.</p>
+                <a href="https://tofumedia0.github.io/tofu-media-form/" target="_blank" class="btn white">
+                    <span data-en="Join TOFU" data-ar="انضم لـ TOFU">Join TOFU</span> ↗
                 </a>
-
             </section>
-
         </main>
 
-
         <!-- FOOTER -->
-
         <footer>
-
             <div class="footer-brand">
-                <strong>TOFU</strong>
-
-                <span
-                    data-en="Teens Opportunities For Upgrowth"
-                    data-ar="Teens Opportunities For Upgrowth">
-                    Teens Opportunities For Upgrowth
-                </span>
+                <strong>TOFU Media</strong>
+                <span data-en="Teens Opportunities For Upgrowth" data-ar="Teens Opportunities For Upgrowth">Teens Opportunities For Upgrowth</span>
             </div>
-
-            <p>
-                © <span id="year"></span> TOFU Media
-            </p>
-
+            <p>© <span id="year"></span> TOFU Media</p>
         </footer>
-
     </div>
 
-
     <script src="script.js"></script>
-
 </body>
 
 </html>
