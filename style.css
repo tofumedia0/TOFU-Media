@@ -1616,3 +1616,132 @@ html[dir="rtl"] .arrow {
     }
 
 }
+/* =========================
+   LANGUAGE BUTTON
+========================= */
+
+.language-btn {
+    border: 0;
+    background: #eee7ff;
+    color: #7653c6;
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .25s;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.language-btn:hover {
+    background: #7653c6;
+    color: white;
+}
+
+
+/* =========================
+   IMAGE ERROR
+========================= */
+
+.image-error {
+    display: none;
+    min-height: 350px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    color: #7653c6;
+    font-weight: 800;
+    text-align: center;
+    padding: 30px;
+}
+
+.image-error small {
+    color: #77718b;
+    font-weight: 500;
+}
+
+
+/* =========================
+   ARABIC
+========================= */
+
+body.arabic {
+    font-family:
+        "Cairo",
+        "Poppins",
+        sans-serif;
+
+    direction: rtl;
+}
+
+body.arabic .navbar {
+    direction: rtl;
+}
+
+body.arabic nav {
+    direction: rtl;
+}
+
+body.arabic .hero,
+body.arabic .story-grid,
+body.arabic .section-heading,
+body.arabic .cards,
+body.arabic .link-grid,
+body.arabic .cta,
+body.arabic footer {
+    direction: rtl;
+}
+
+body.arabic .hero-copy {
+    text-align: right;
+}
+
+body.arabic .hero-actions,
+body.arabic .mini-stats {
+    justify-content: flex-start;
+}
+
+body.arabic .section-heading {
+    text-align: right;
+}
+
+body.arabic .social-link {
+    direction: rtl;
+}
+
+body.arabic .social-link > strong {
+    transform: rotate(180deg);
+}
+
+body.arabic .cta {
+    text-align: right;
+}
+
+body.arabic .footer-top,
+body.arabic .footer-bottom {
+    direction: rtl;
+}
+
+
+/* MOBILE LANGUAGE */
+
+@media (max-width: 650px) {
+
+    .language-btn {
+        margin-left: auto;
+        margin-right: 8px;
+        padding: 7px 11px;
+        font-size: 11px;
+    }
+
+    body.arabic .hero-copy {
+        text-align: center;
+    }
+
+    body.arabic .hero-actions,
+    body.arabic .mini-stats {
+        justify-content: center;
+    }
+
+}
