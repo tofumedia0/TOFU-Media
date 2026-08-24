@@ -703,3 +703,41 @@ body.rtl .link-card:hover {
         padding: 28px;
     }
 }
+    /* =========================
+   3D CARDS MOTION & HOVER
+========================= */
+
+/* إضافة عمق ثلاثي الأبعاد للحاويات */
+.cards, 
+.links-grid, 
+.about-grid {
+    perspective: 1000px;
+}
+
+/* حركة الكروت الأساسية */
+.card, 
+.link-card, 
+.about-big {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.4s ease, 
+                border-color 0.4s ease;
+    will-change: transform;
+    transform-style: preserve-3d;
+}
+
+/* تأثير الارتفاع والإضاءة عند وقوف الماوس */
+.card:hover, 
+.link-card:hover, 
+.about-big:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(163, 107, 255, 0.15);
+    border-color: #a36bff;
+}
+
+/* حركة إضافية للأيقونات جوه الكارت لما تقفي عليه */
+.card:hover .card-icon,
+.link-card:hover .link-icon,
+.collaboration-card:hover .collaboration-logo {
+    transform: scale(1.15) translateZ(20px);
+    transition: transform 0.3s ease;
+}
