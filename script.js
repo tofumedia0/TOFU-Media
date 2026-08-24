@@ -16,7 +16,6 @@ if (startBtn) {
     });
 }
 
-
 // ===============================
 // MOBILE MENU
 // ===============================
@@ -37,7 +36,6 @@ navLinks.forEach(function (link) {
         if (nav) nav.classList.remove("open");
     });
 });
-
 
 // ===============================
 // LANGUAGE SWITCHER
@@ -63,7 +61,6 @@ function changeLanguage(language) {
         if (languageText) languageText.textContent = "AR";
     }
 
-    // ترجمة كل العناصر التي تحتوي على data-en و data-ar
     const elements = document.querySelectorAll("[data-en][data-ar]");
 
     elements.forEach(function (element) {
@@ -84,7 +81,6 @@ if (languageBtn) {
     });
 }
 
-
 // ===============================
 // SCROLL ANIMATION
 // ===============================
@@ -104,7 +100,6 @@ const observer = new IntersectionObserver(function (entries) {
 revealElements.forEach(function (element) {
     observer.observe(element);
 });
-
 
 // ===============================
 // FOOTER YEAR
