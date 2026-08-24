@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
 
@@ -10,7 +10,6 @@
     <title>TOFU Media | Teens Opportunities For Upgrowth</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
@@ -21,61 +20,63 @@
 
 </head>
 
-
 <body>
 
-
     <!-- Scroll Progress -->
-
     <div class="progress-bar" id="progressBar"></div>
 
 
-
     <!-- Navbar -->
-
     <header class="navbar">
 
         <a href="#home" class="brand">
 
-            <span class="brand-mark">
-                T
-            </span>
+            <span class="brand-mark">T</span>
 
-            <span>
-                TOFU
-            </span>
+            <span>TOFU</span>
 
         </a>
 
 
-        <button
-            class="menu-btn"
-            id="menuBtn">
+        <div class="language-switch">
 
+            <button id="enBtn" class="lang-btn active">
+                EN
+            </button>
+
+            <span>|</span>
+
+            <button id="arBtn" class="lang-btn">
+                عربي
+            </button>
+
+        </div>
+
+
+        <button class="menu-btn" id="menuBtn">
             ☰
-
         </button>
 
 
         <nav id="nav">
 
-            <a href="#home">
+            <a href="#home" data-key="home">
                 Home
             </a>
 
-            <a href="#about">
+            <a href="#about" data-key="about">
                 About
             </a>
 
-            <a href="#opportunities">
+            <a href="#opportunities" data-key="opportunities">
                 Opportunities
             </a>
 
-            <a href="#links">
+            <a href="#links" data-key="links">
                 Links
             </a>
 
-            <a href="#join">
+            <a href="#join" data-key="join">
                 Join Us
             </a>
 
@@ -84,27 +85,16 @@
     </header>
 
 
-
     <main>
 
+        <!-- HERO -->
 
-        <!-- =========================
-             HERO
-        ========================== -->
-
-        <section
-            class="hero"
-            id="home">
-
+        <section class="hero" id="home">
 
             <div class="hero-copy reveal">
 
-
-                <div class="pill">
-
-                    💜 Built for teens,
-                    powered by opportunities
-
+                <div class="pill" data-key="pill">
+                    💜 Built for teens, powered by opportunities
                 </div>
 
 
@@ -115,15 +105,20 @@
 
                 <h2>
 
-                    Teens Opportunities
-                    <span>
+                    <span data-key="heroTitle">
+                        Teens Opportunities
+                    </span>
+
+                    <br>
+
+                    <span data-key="heroSpan">
                         For Upgrowth
                     </span>
 
                 </h2>
 
 
-                <p>
+                <p data-key="heroText">
 
                     TOFU is a youth-focused initiative
                     helping teens discover opportunities,
@@ -134,114 +129,75 @@
 
                 <div class="hero-actions">
 
-
                     <a
                         class="btn primary"
                         href="https://tofumedia0.github.io/tofu-media-form/"
                         target="_blank">
 
-                        Join TOFU
-
-                        <span>
-                            ↗
+                        <span data-key="joinTofu">
+                            Join TOFU
                         </span>
+
+                        <span>↗</span>
 
                     </a>
 
 
                     <a
                         class="btn ghost"
-                        href="#opportunities">
+                        href="#opportunities"
+                        data-key="discover">
 
                         Discover Opportunities
 
                     </a>
-
 
                 </div>
 
 
                 <div class="mini-stats">
 
-
                     <div>
-
-                        <strong>
-                            01
-                        </strong>
-
-                        <span>
+                        <strong>01</strong>
+                        <span data-key="discoverSmall">
                             Discover
                         </span>
-
                     </div>
 
-
                     <div>
-
-                        <strong>
-                            02
-                        </strong>
-
-                        <span>
+                        <strong>02</strong>
+                        <span data-key="learn">
                             Learn
                         </span>
-
                     </div>
-
 
                     <div>
-
-                        <strong>
-                            03
-                        </strong>
-
-                        <span>
+                        <strong>03</strong>
+                        <span data-key="grow">
                             Grow
                         </span>
-
                     </div>
 
-
                 </div>
-
 
             </div>
 
 
+            <!-- LOGO -->
 
-            <!-- =========================
-                 LOGO IMAGE
-            ========================== -->
-
-            <div
-                class="hero-visual reveal delay-1">
-
+            <div class="hero-visual reveal delay-1">
 
                 <div class="orbit orbit-1"></div>
-
                 <div class="orbit orbit-2"></div>
 
 
-                <div
-                    class="logo-card"
-                    id="logoCard">
-
-
-                    <!--
-                    الصورة هنا 👇
-
-                    لازم تكون جنب index.html
-                    واسمها tofu-logo.png
-                    -->
+                <div class="logo-card" id="logoCard">
 
                     <img
                         src="tofu-logo.png"
                         alt="TOFU Media Logo">
 
-
                     <div class="shine"></div>
-
 
                 </div>
 
@@ -250,56 +206,51 @@
                     ✦
                 </span>
 
-
                 <span class="floating-star star-b">
                     ✧
                 </span>
-
 
                 <span class="floating-star star-c">
                     ✦
                 </span>
 
-
             </div>
-
 
         </section>
 
 
+        <!-- ABOUT -->
 
-        <!-- =========================
-             ABOUT
-        ========================== -->
+        <section class="story section reveal" id="about">
 
-        <section
-            class="story section reveal"
-            id="about">
-
-
-            <div class="section-tag">
-
+            <div class="section-tag" data-key="ourStory">
                 OUR STORY
-
             </div>
 
 
             <div class="story-grid">
 
-
                 <div>
 
                     <h2>
 
-                        TOFU started with
-                        <span>
+                        <span data-key="started">
+                            TOFU started with
+                        </span>
+
+                        <span data-key="marketing">
                             Marketing.
                         </span>
 
                         <br>
 
-                        Now we're building
-                        opportunities.
+                        <span data-key="building">
+                            Now we're building
+                        </span>
+
+                        <span data-key="opportunitiesWord">
+                            opportunities.
+                        </span>
 
                     </h2>
 
@@ -308,8 +259,7 @@
 
                 <div class="story-text">
 
-
-                    <p>
+                    <p data-key="story1">
 
                         TOFU started as a Marketing Team
                         helping people, initiatives, events
@@ -319,7 +269,7 @@
                     </p>
 
 
-                    <p>
+                    <p data-key="story2">
 
                         But we wanted to do more.
 
@@ -332,18 +282,17 @@
 
                     <div class="timeline">
 
-
                         <div class="timeline-item">
 
                             <span class="dot"></span>
 
                             <div>
 
-                                <b>
+                                <b data-key="then">
                                     Then
                                 </b>
 
-                                <small>
+                                <small data-key="marketingMedia">
                                     Marketing & Media
                                 </small>
 
@@ -361,11 +310,11 @@
 
                             <div>
 
-                                <b>
+                                <b data-key="now">
                                     Now
                                 </b>
 
-                                <small>
+                                <small data-key="youthOpportunities">
                                     Youth Opportunities
                                 </small>
 
@@ -373,45 +322,34 @@
 
                         </div>
 
-
                     </div>
-
 
                 </div>
 
-
             </div>
-
 
         </section>
 
 
+        <!-- OPPORTUNITIES -->
 
-        <!-- =========================
-             OPPORTUNITIES
-        ========================== -->
-
-        <section
-            class="section"
-            id="opportunities">
-
+        <section class="section" id="opportunities">
 
             <div class="section-heading reveal">
 
-
                 <div>
 
-                    <div class="section-tag">
-
+                    <div class="section-tag" data-key="whatWeDo">
                         WHAT WE DO
-
                     </div>
-
 
                     <h2>
 
-                        Find your next
-                        <span>
+                        <span data-key="findYour">
+                            Find your next
+                        </span>
+
+                        <span data-key="opportunity">
                             opportunity.
                         </span>
 
@@ -420,7 +358,7 @@
                 </div>
 
 
-                <p>
+                <p data-key="opportunitiesText">
 
                     We help young people discover
                     opportunities that can help them
@@ -428,202 +366,142 @@
 
                 </p>
 
-
             </div>
-
 
 
             <div class="cards">
 
 
-                <!-- Scholarship -->
+                <!-- 01 -->
 
                 <article class="op-card reveal">
 
-                    <div class="icon">
-                        🎓
-                    </div>
+                    <div class="icon">🎓</div>
 
-                    <span class="number">
-                        01
-                    </span>
+                    <span class="number">01</span>
 
-                    <h3>
+                    <h3 data-key="scholarships">
                         Scholarships
                     </h3>
 
-                    <p>
-
+                    <p data-key="scholarshipsText">
                         Discover scholarships and
                         educational opportunities.
-
                     </p>
 
-                    <div class="arrow">
-                        ↗
-                    </div>
+                    <div class="arrow">↗</div>
 
                 </article>
 
 
-
-                <!-- Courses -->
+                <!-- 02 -->
 
                 <article class="op-card reveal delay-1">
 
-                    <div class="icon">
-                        💻
-                    </div>
+                    <div class="icon">💻</div>
 
-                    <span class="number">
-                        02
-                    </span>
+                    <span class="number">02</span>
 
-                    <h3>
+                    <h3 data-key="courses">
                         Courses
                     </h3>
 
-                    <p>
-
+                    <p data-key="coursesText">
                         Learn new skills through courses
                         and educational programs.
-
                     </p>
 
-                    <div class="arrow">
-                        ↗
-                    </div>
+                    <div class="arrow">↗</div>
 
                 </article>
 
 
-
-                <!-- Competitions -->
+                <!-- 03 -->
 
                 <article class="op-card reveal delay-2">
 
-                    <div class="icon">
-                        🏆
-                    </div>
+                    <div class="icon">🏆</div>
 
-                    <span class="number">
-                        03
-                    </span>
+                    <span class="number">03</span>
 
-                    <h3>
+                    <h3 data-key="competitions">
                         Competitions
                     </h3>
 
-                    <p>
-
+                    <p data-key="competitionsText">
                         Challenge yourself and gain
                         real experience.
-
                     </p>
 
-                    <div class="arrow">
-                        ↗
-                    </div>
+                    <div class="arrow">↗</div>
 
                 </article>
 
 
-
-                <!-- Events -->
+                <!-- 04 -->
 
                 <article class="op-card reveal">
 
-                    <div class="icon">
-                        🎤
-                    </div>
+                    <div class="icon">🎤</div>
 
-                    <span class="number">
-                        04
-                    </span>
+                    <span class="number">04</span>
 
-                    <h3>
+                    <h3 data-key="events">
                         Events
                     </h3>
 
-                    <p>
-
+                    <p data-key="eventsText">
                         Find events where you can learn,
                         connect and meet new people.
-
                     </p>
 
-                    <div class="arrow">
-                        ↗
-                    </div>
+                    <div class="arrow">↗</div>
 
                 </article>
 
 
+                <!-- 05 -->
 
-                <!-- More -->
+                <article class="op-card featured reveal delay-1">
 
-                <article
-                    class="op-card featured reveal delay-1">
+                    <div class="icon">🚀</div>
 
-                    <div class="icon">
-                        🚀
-                    </div>
+                    <span class="number">05</span>
 
-                    <span class="number">
-                        05
-                    </span>
-
-                    <h3>
+                    <h3 data-key="moreOpportunities">
                         More Opportunities
                     </h3>
 
-                    <p>
-
+                    <p data-key="moreOpportunitiesText">
                         Volunteering, programs,
                         collaborations and more.
-
                     </p>
 
-                    <div class="arrow">
-                        ↗
-                    </div>
+                    <div class="arrow">↗</div>
 
                 </article>
 
-
             </div>
-
 
         </section>
 
 
+        <!-- LINKS -->
 
-        <!-- =========================
-             LINKS
-        ========================== -->
-
-        <section
-            class="links section"
-            id="links">
-
+        <section class="links section" id="links">
 
             <div class="section-heading reveal">
 
-
                 <div>
 
-                    <div class="section-tag">
-
+                    <div class="section-tag" data-key="stayConnected">
                         STAY CONNECTED
-
                     </div>
-
 
                     <h2>
 
-                        TOFU,
-                        <span>
-                            one click away.
+                        <span data-key="tofuOne">
+                            TOFU, one click away.
                         </span>
 
                     </h2>
@@ -631,103 +509,77 @@
                 </div>
 
 
-                <p>
-
+                <p data-key="followUs">
                     Follow us and never miss
                     our latest updates.
-
                 </p>
-
 
             </div>
 
 
-
             <div class="link-grid">
 
-
-                <!-- Volunteer -->
 
                 <a
                     class="social-link reveal"
                     href="https://tofumedia0.github.io/tofu-media-form/"
                     target="_blank">
 
-
                     <span class="social-icon">
                         📝
                     </span>
 
-
                     <span>
 
-                        <b>
+                        <b data-key="volunteerApplication">
                             Volunteer Application
                         </b>
 
-                        <small>
+                        <small data-key="joinTeam">
                             Join the TOFU team
                         </small>
 
                     </span>
 
-
-                    <strong>
-                        ↗
-                    </strong>
-
+                    <strong>↗</strong>
 
                 </a>
 
-
-
-                <!-- WhatsApp -->
 
                 <a
                     class="social-link reveal delay-1"
                     href="https://whatsapp.com/channel/0029Vb8LeVt8Pgs7tu6oem2l"
                     target="_blank">
 
-
                     <span class="social-icon">
                         📢
                     </span>
 
-
                     <span>
 
-                        <b>
+                        <b data-key="whatsapp">
                             WhatsApp Channel
                         </b>
 
-                        <small>
+                        <small data-key="latestUpdates">
                             Latest updates & opportunities
                         </small>
 
                     </span>
 
-
-                    <strong>
-                        ↗
-                    </strong>
-
+                    <strong>↗</strong>
 
                 </a>
 
-
-
-                <!-- Instagram -->
 
                 <a
                     class="social-link reveal delay-2"
                     href="https://www.instagram.com/tofumedia0?igsh=MWFidWJneDhkZ3d0"
                     target="_blank">
 
-
                     <span class="social-icon">
                         📸
                     </span>
-
 
                     <span>
 
@@ -735,34 +587,25 @@
                             Instagram
                         </b>
 
-                        <small>
+                        <small data-key="followInstagram">
                             Follow TOFU Media
                         </small>
 
                     </span>
 
-
-                    <strong>
-                        ↗
-                    </strong>
-
+                    <strong>↗</strong>
 
                 </a>
 
-
-
-                <!-- Facebook -->
 
                 <a
                     class="social-link reveal"
                     href="https://www.facebook.com/share/1ctJQ6fC7n/"
                     target="_blank">
 
-
                     <span class="social-icon">
                         💙
                     </span>
-
 
                     <span>
 
@@ -770,67 +613,54 @@
                             Facebook
                         </b>
 
-                        <small>
+                        <small data-key="followFacebook">
                             Follow our Facebook page
                         </small>
 
                     </span>
 
-
-                    <strong>
-                        ↗
-                    </strong>
-
+                    <strong>↗</strong>
 
                 </a>
 
-
             </div>
-
 
         </section>
 
 
+        <!-- JOIN -->
 
-        <!-- =========================
-             JOIN
-        ========================== -->
-
-        <section
-            class="cta reveal"
-            id="join">
-
+        <section class="cta reveal" id="join">
 
             <div class="cta-content">
 
-
-                <div class="section-tag light">
-
+                <div class="section-tag light" data-key="ready">
                     READY?
-
                 </div>
 
 
                 <h2>
 
-                    Your next opportunity
+                    <span data-key="nextOpportunity">
+                        Your next opportunity
+                    </span>
+
                     <br>
 
-                    might start with
-                    <span>
-                        TOFU.
+                    <span data-key="mightStart">
+                        might start with
                     </span>
+
+                    <span>TOFU.</span>
 
                     💜
 
                 </h2>
 
 
-                <p>
-
+                <p data-key="joinDescription">
                     Join us, discover opportunities
                     and grow with the community.
-
                 </p>
 
 
@@ -839,97 +669,68 @@
                     href="https://tofumedia0.github.io/tofu-media-form/"
                     target="_blank">
 
-                    Become a Volunteer
-
-                    <span>
-                        ↗
+                    <span data-key="becomeVolunteer">
+                        Become a Volunteer
                     </span>
 
-                </a>
+                    <span>↗</span>
 
+                </a>
 
             </div>
 
 
             <div class="cta-symbol">
-
                 ✦
-
             </div>
 
-
         </section>
-
 
     </main>
 
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- FOOTER -->
 
     <footer>
 
-
         <div class="footer-top">
-
 
             <div class="footer-brand">
 
-                <span>
-                    TOFU
-                </span>
+                <span>TOFU</span>
 
-                <small>
+                <small data-key="fullName">
                     Teens Opportunities For Upgrowth
                 </small>
 
             </div>
 
 
-            <a
-                href="#home"
-                class="back-top">
-
+            <a href="#home" class="back-top" data-key="backTop">
                 Back to top ↑
-
             </a>
-
 
         </div>
 
 
         <div class="footer-bottom">
 
-
             <span>
-
                 ©
                 <span id="year"></span>
                 TOFU Media
-
             </span>
 
-
-            <span>
-
+            <span data-key="footerText">
                 Made for young dreamers & doers 💜
-
             </span>
-
 
         </div>
-
 
     </footer>
 
 
-
-    <!-- JavaScript -->
-
     <script src="script.js"></script>
-
 
 </body>
 
