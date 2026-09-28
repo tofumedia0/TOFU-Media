@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Join TOFU Media</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f7efff, #ffffff);
+            color: #17121c;
+        }
+
+        .signup-container {
+            width: 100%;
+            max-width: 450px;
+            padding: 40px 32px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #eadcf5;
+            border-radius: 28px;
+            box-shadow: 0 20px 60px rgba(100, 55, 130, 0.12);
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: 8px;
+            direction: ltr;
+            color: #7b3fb2;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #ddd;
+            border-radius: 14px;
+            outline: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #7b3fb2;
+            box-shadow: 0 0 0 4px rgba(123, 63, 178, 0.08);
+        }
+
+        .signup-btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 15px;
+            background: #7b3fb2;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 5px;
+        }
+
+        .signup-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(123, 63, 178, 0.25);
+        }
+
+        .signup-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .message {
+            display: none;
+            margin-top: 18px;
+            padding: 12px 15px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .message.error {
+            display: block;
+            background: #fff0f0;
+            color: #b42318;
+        }
+
+        .message.success {
+            display: block;
+            background: #eefbf3;
+            color: #16723a;
+        }
+
+        .login-text {
+            text-align: center;
+            margin-top: 22px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .login-text a {
+            color: #7b3fb2;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .login-text a:hover {
+            text-decoration: underline;
+        }
+
+        .back-home {
+            display: block;
+            text-align: center;
+            margin-top: 18px;
+            color: #888;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .back-home:hover {
+            color: #7b3fb2;
+        }
+
+        @media (max-width: 500px) {
+            .signup-container {
+                padding: 32px 22px;
+            }
+
+            .logo {
+                font-size: 36px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="signup-container">
+
+        <div class="logo">TOFU</div>
+
+        <p class="subtitle">Teens Opportunities For Upgrowth</p>
+
+        <h1>Create Your Account</h1>
+
+        <form id="signupForm">
+
+            <div class="form-group">
+                <label for="email">Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                    autocomplete="email"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="At least 6 characters"
+                    required
+                    minlength="6"
+                    autocomplete="new-password"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Repeat your password"
+                    required
+                    minlength="6"
+                    autocomplete="new-password"
+                >
+            </div>
+
+            <button
+                type="submit"
+                class="signup-btn"
+                id="signupBtn"
+            >
+                Create Account
+            </button>
+
+            <div
+                class="message"
+                id="message"
+            ></div>
+
+        </form>
+
+        <p class="login-text">
+            Already have an account?
+            <a href="login.html">Log in</a>
+        </p>
+
+        <a
+            href="index.html"
+            class="back-home"
+        >
+            ← Back to TOFU
+        </a>
+
+    </div>
+
+    <script type="module">
+
+        import { signUp } from "./auth.js";
+
+        const signupForm = document.getElementById("signupForm");
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+        const confirmPasswordInput = document.getElementById("confirmPassword");
+        const signupBtn = document.getElementById("signupBtn");
+        const message = document.getElementById("message");
+
+        signupForm.addEventListener("submit", async function(event) {
+
+            event.preventDefault();
+
+            const email = emailInput.value.trim();
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+
+            message.className = "message";
+            message.textContent = "";
+
+            if (password !== confirmPassword) {
+
+                message.className = "message error";
+                message.textContent = "Passwords do not match.";
+
+                return;
+            }
+
+            if (password.length < 6) {
+
+                message.className = "message error";
+                message.textContent = "Password must be at least 6 characters.";
+
+                return;
+            }
+
+            signupBtn.disabled = true;
+            signupBtn.textContent = "Creating account...";
+
+            const result = await signUp(email, password);
+
+            if (result.success) {
+
+                message.className = "message success";
+                message.textContent = "Account created successfully!";
+
+                signupForm.reset();
+
+                setTimeout(function() {
+                    window.location.href = "index.html";
+                }, 1500);
+
+            } else {
+
+                message.className = "message error";
+                message.textContent = result.error;
+
+                signupBtn.disabled = false;
+                signupBtn.textContent = "Create Account";
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
